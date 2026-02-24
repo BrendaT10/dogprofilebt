@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dog Profile</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="container">
+    <h1>Dog Profile</h1>
+    <p class="description">
+      This page stores basic information about a dog and their care needs.
+    </p>
+ 
+    <main>
+      <section> 
+        <img src="dog.JPG" alt="Shih-Tzu dog with a red bow">
+        <h2> 🐾 Basic Dog Information</h2>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+          Select image of your dog to upload:<br>
+          <input type="file" name="fileToUpload" id="fileToUpload"><br>
+          <input type="submit" value="Upload Image" name="submit">
+        </form>
+		<form>
+		  <label for="dogname">Dog Name:</label><br>
+		  <input type="text" id="dogname" name="dogname"><br>
+		  <label for="breed">Breed:</label><br>
+		  <input type="text" id="breed" name="breed"><br>
+		  <label for="age">Age:</label><br>
+		  <input type="number" id="age" name="age"><br>
+		  <label for="weight">Weight:</label><br>
+		  <input type="number" id="weight" name="weight"><br>
+		  <label>Gender:</label><br>
+<input type="radio" id="male" name="gender" value="Male">
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="Female">
+<label for="female">Female</label><br>
+<label for="dob"> Date of Birth:</label><br>
+		  <input type="date" id="dob" name="dob"><br>
+		  <label for="Spayed"> Spayed or Neutered:</label><br>
+		  <input type="checkbox" name="Spayed" id="Spayed">
+		  <label for="Spayed"> Spayed</label>
+		  <input type="checkbox" name="Neutered" id="Neutered">
+		  <label for="Neutered"> Neutered</label>
+		  <input type="checkbox" name="unaltered" id="unaltered">
+		  <label for="unaltered"> Unaltered</label><br>
+		  <input type="submit" value="Submit">
+		  </form>
+	</section>
+	<section>
+		<h2> Personality Notes</h2>
+		<textarea placeholder="Friendly">Friendly, Shy, Energetic...</textarea>
+	</section>
+
+	<section>
+		<h2> 💉 Vaccination Record</h2>
+		<form>
+		  <input type="checkbox" id="rabies" name="rabies" value="rabies">
+		  <label for="rabies"> Rabies</label>
+		  <input type="date"><br>
+		  <input type="checkbox" id="distemper" name="distemper" value="distemper">
+		  <label for="distemper"> Distemper</label>
+		  <input type="date"><br>
+		  <input type="checkbox" id="bordetella" name="bordetella" value="bordetella">
+		  <label for="bordetella"> Boratella </label>
+		  <input type="date"><br>
+		  <input type="checkbox" id="parvo" name="parvo" value="parvo">
+		  <label for="parvo"> Parovirus </label>
+		  <input type="date"><br>
+		  <input type="checkbox" id="lepto" name="lepto" value="lepto">
+		  <label for="lepto"> Leptospirosis </label>
+		  <input type="date"><br><br>
+		</form>
+		<h2>🦴 Feeding Schedule</h2>
+		<label>Food Brand:</label><br>
+		<input type="text" name="text"><br>
+		<label>Feeding Time:</label><br>
+		<input type="time" name="time"><br>
+		<label>Amount per day:</label> <br>
+		<input type="text" name="text"><br>
+		<label>Supplements: </label><br>
+		<input type="text" name="text">
+	</section>
+	<section>
+		<h2>🛁 Grooming</h2>
+		<input type="checkbox" name="Brushed"> Brushed
+		<input type="date" name="Brushed"><br>
+		<input type="checkbox" name="Bathed"> Bathed
+		<input type="date" name="Bathed"><br>
+		<input type="checkbox" name="nailstrimmed"> Nails Trimmed
+		<input type="date" name="nailstrimmed"><br>
+		<input type="checkbox" name="earclean"> Ears Cleaned
+		<input type="date" name="earclean"><br>
+
+	</section>
+	<section> 
+		<h2> Care Notes </h2>
+		<p> Use this section to record important care Information such as allergies, medications, or special instructions </p>
+		<form>
+		  <label for="Carenotes">Care Notes:</label><br>
+		  <input type="text" id="Carenotes" name="Carenotes"><br>
+		  		  <input type="submit" value="Submit">
+		</form>
+	</section>
+	<section> 
+		<h2> Emergency Contact</h2>
+		<label> Owner Number:</label><br>
+		<input type="tel" id="ownerphone" name="ownerphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br>
+		<input type="submit" value="Submit">
+	</section>
+	<section>
+		<h2> Find a local veterinarian</h2>
+		<a href="https://www.massvets.com/?utm_source=gmb&utm_medium=organic&y_source=1_MTE2Njg3MTgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D">Massanutten Animal Clinic</a><br>
+		<a href="https://anicira.org/">Anicira Veterinary Center</a><br>
+		<a href="https://heartlandvetclinic.com/">Heartland Veterinary Clinic</a><br>
+	</section>
+</main>
+</div>
+<footer>
+  <p>Author: Brenda Tejada</p>
+  <p><a href="mailto:Brendatejada205@gmail.com">Brendatejada205@gmail.com</a></p>
+</footer>
+
+</body>
+</html>

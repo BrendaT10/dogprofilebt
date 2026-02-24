@@ -1,0 +1,139 @@
+styles.css
+
+
+body {
+  background: linear-gradient(135deg, #f6d565, #fda083);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('paw.png');
+  background-repeat: repeat;
+  background-size: 80px;
+  opacity: 0.15;  
+  z-index: -1;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+  background: transparent;
+}
+
+h1 {
+  color: #ff6f61;
+  text-align: center;
+  font-size: 3rem;
+  margin: 40px 0 10px 0;
+}
+
+.description {
+  text-align: center;
+  color: #ff6f61;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.85); 
+   backdrop-filter: blur(10px);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  margin-top: 0;
+  color: #ff6f61;
+  border-bottom: 2px solid #ffe0dc;
+  padding-bottom: 5px;
+}
+
+img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+ margin: 0 auto 20px auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff6f61;
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+input[type="submit"] {
+  background: linear-gradient(45deg, #ff6f61, #ff9472);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+footer a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
