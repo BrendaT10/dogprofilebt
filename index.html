@@ -1,230 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<title>Dog Profile</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<!--
-AI Use Disclosure:
-Tool(s): ChatGPT (free version)
-Purpose: Helped Me with why my background wasn't showing up
-Human Role: I applied the explanation to my project situation, inserted the recommended CSS code, and modified the code to work on my page. -->
-<!--
-AI Use Disclosure:
-Tool(s): ChatGPT (free version)
-Purpose: Helped explain Bootstrap grid behavior and suggested layout options.
-Human Role: I selected which suggestions to use, modified the layout, and verified responsiveness manually.
--->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dog Profile Page">
+    <meta name="author" content="Brenda Tejada">
+    <title>Dog Profile · Bootstrap v5.3.8</title>
 
+    <!-- Bootstrap v5.3.8 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- Custom styles -->
+    <link href="styles.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
 
-</head>
+  <body>
 
-<body>
-	
-	<div class="container my-5">
-	  <div class="row">
-	    <div class="col-lg-10 mx-auto">
-    <h1>Dog Profile</h1>
-    <p class="description text-center">
-      This page stores basic information about a dog and their care needs.
-    </p>
- 
-    <main>
-      <div class="card mb-4 shadow">
-        <div class="card-body">
-              <img src="dog.JPG" class="img-circle mb-3" alt="Shih-Tzu dog with a red bow">
-        <h2> 🐾 Basic Dog Information</h2>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-          Select image of your dog to upload:<br>
-          <input type="file" class="form-control" name="fileToUpload" id="fileToUpload"><br>
-         <button type="submit" class="btn btn-primary mt-2">Submit</button>
-        </form>
-		<form>
-		  <label for="dogname">Dog Name:</label><br>
-		  <input type="text" class="form-control" id="dogname">
-		  <label for="breed">Breed:</label><br>
-		 <input type="text" class="form-control" id="breed">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="text-center mb-4">Dog Profile</h1>
+          <p class="description text-center mb-5">
+            This page stores basic information about a dog and their care needs.
+          </p>
 
-		  <label for="age">Age:</label><br>
-		  <input type="number" class="form-control" id="age" name="age"><br>
-		  <label for="weight">Weight:</label><br>
-		  <input type="number" class="form-control" id="weight" name="weight"><br>
-		  <label>Gender:</label><br>
+          <main>
+            <!-- Basic Dog Information Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <img src="dog.JPG" class="img-circle mb-3" alt="Shih-Tzu dog with a red bow">
+                <h2>🐾 Basic Dog Information</h2>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                  Select image of your dog to upload:<br>
+                  <input type="file" class="form-control" name="fileToUpload" id="fileToUpload"><br>
+                  <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
 
-		  <div class="form-check">
-		    <input class="form-check-input" type="radio" name="gender" id="male">
-		    <label class="form-check-label" for="male">Male</label>
-		  </div>
+                <form>
+                  <label for="dogname">Dog Name:</label>
+                  <input type="text" class="form-control mb-2" id="dogname">
 
-		  <div class="form-check">
-		    <input class="form-check-input" type="radio" name="gender" id="female">
-		    <label class="form-check-label" for="female">Female</label>
-		  </div>
-<label for="dob"> Date of Birth:</label><br>
-		  <input type="date" class="form-control" id="dob" name="dob"><br>
-		  <label for="Spayed"> Spayed or Neutered:</label><br>
+                  <label for="breed">Breed:</label>
+                  <input type="text" class="form-control mb-2" id="breed">
 
-		  <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="Spayed">
-  <label class="form-check-label" for="Spayed">Spayed</label>
-</div>
+                  <label for="age">Age:</label>
+                  <input type="number" class="form-control mb-2" id="age" name="age">
 
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" id="Neutered">
-  <label class="form-check-label" for="Neutered">Neutered</label>
-</div>
+                  <label for="weight">Weight:</label>
+                  <input type="number" class="form-control mb-2" id="weight" name="weight">
 
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" id="unaltered">
-  <label class="form-check-label" for="unaltered">Unaltered</label>
-</div>		  <br>
-		  <button type="submit" class="btn btn-primary mt-2">Submit</button>
-		  </form>
-	</div>
-	</div>
+                  <label>Gender:</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male">
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="gender" id="female">
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
 
+                  <label for="dob">Date of Birth:</label>
+                  <input type="date" class="form-control mb-2" id="dob" name="dob">
 
+                  <label>Spayed or Neutered:</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Spayed">
+                    <label class="form-check-label" for="Spayed">Spayed</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Neutered">
+                    <label class="form-check-label" for="Neutered">Neutered</label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="unaltered">
+                    <label class="form-check-label" for="unaltered">Unaltered</label>
+                  </div>
 
-	<div class="card mb-4 shadow">
-	  <div class="card-body">
-		<h2> Personality Notes</h2>
-		<textarea class="form-control" rows="3" placeholder="Friendly, Shy, Energetic..."></textarea>
-	</div>
-	</div>
+                  <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+              </div>
+            </div>
 
-	<div class="card mb-4 shadow">
-	  <div class="card-body">
-		<h2> 💉 Vaccination Record</h2>
-		<form>
-		  <input type="checkbox" id="rabies" name="rabies" value="rabies">
-		  <label for="rabies"> Rabies</label>
-		  <input type="date"><br>
-		  <input type="checkbox" id="distemper" name="distemper" value="distemper">
-		  <label for="distemper"> Distemper</label>
-		  <input type="date"><br>
-		  <input type="checkbox" id="bordetella" name="bordetella" value="bordetella">
-		  <label for="bordetella"> Boratella </label>
-		  <input type="date"><br>
-		  <input type="checkbox" id="parvo" name="parvo" value="parvo">
-		  <label for="parvo"> Parovirus </label>
-		  <input type="date"><br>
-		  <input type="checkbox" id="lepto" name="lepto" value="lepto">
-		  <label for="lepto"> Leptospirosis </label>
-		  <input type="date"><br><br>
-		</form>
-		<h2>🦴 Feeding Schedule</h2>
-		<form>
-  <label class="form-label">Food Brand:</label>
-  <input type="text" class="form-control">
+            <!-- Personality Notes Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <h2>Personality Notes</h2>
+                <textarea class="form-control" rows="3" placeholder="Friendly, Shy, Energetic..."></textarea>
+              </div>
+            </div>
 
-  <label class="form-label mt-2">Feeding Time:</label>
-  <input type="time" class="form-control">
+            <!-- Vaccination Record Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <h2>💉 Vaccination Record</h2>
+                <form>
+                  <div class="mb-2">
+                    <input type="checkbox" id="rabies" name="rabies">
+                    <label for="rabies">Rabies</label>
+                    <input type="date" class="form-control mt-1">
+                  </div>
+                  <div class="mb-2">
+                    <input type="checkbox" id="distemper" name="distemper">
+                    <label for="distemper">Distemper</label>
+                    <input type="date" class="form-control mt-1">
+                  </div>
+                  <div class="mb-2">
+                    <input type="checkbox" id="bordetella" name="bordetella">
+                    <label for="bordetella">Bordetella</label>
+                    <input type="date" class="form-control mt-1">
+                  </div>
+                  <div class="mb-2">
+                    <input type="checkbox" id="parvo" name="parvo">
+                    <label for="parvo">Parvovirus</label>
+                    <input type="date" class="form-control mt-1">
+                  </div>
+                  <div class="mb-2">
+                    <input type="checkbox" id="lepto" name="lepto">
+                    <label for="lepto">Leptospirosis</label>
+                    <input type="date" class="form-control mt-1">
+                  </div>
+                </form>
 
-  <label class="form-label mt-2">Amount per day:</label>
-  <input type="text" class="form-control">
+                <h2>🦴 Feeding Schedule</h2>
+                <form>
+                  <label class="form-label">Food Brand:</label>
+                  <input type="text" class="form-control mb-2">
 
-  <label class="form-label mt-2">Supplements:</label>
-  <input type="text" class="form-control">
+                  <label class="form-label">Feeding Time:</label>
+                  <input type="time" class="form-control mb-2">
 
-  <button type="submit" class="btn btn-primary mt-3">Save</button>
-</form>
-	</div>
-	</div>
+                  <label class="form-label">Amount per day:</label>
+                  <input type="text" class="form-control mb-2">
 
+                  <label class="form-label">Supplements:</label>
+                  <input type="text" class="form-control mb-2">
 
+                  <button type="submit" class="btn btn-primary mt-2">Save</button>
+                </form>
+              </div>
+            </div>
 
-	<div class="card mb-4 shadow">
-	  <div class="card-body">
-		<h2>🛁 Grooming</h2>
-		<form>
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="brushed">
-    <label class="form-check-label" for="brushed">Brushed</label>
-  </div>
-  <input type="date" class="form-control mb-2">
+            <!-- Grooming Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <h2>🛁 Grooming</h2>
+                <form>
+                  <div class="form-check mb-1">
+                    <input class="form-check-input" type="checkbox" id="brushed">
+                    <label class="form-check-label" for="brushed">Brushed</label>
+                    <input type="date" class="form-control mt-1 mb-2">
+                  </div>
+                  <div class="form-check mb-1">
+                    <input class="form-check-input" type="checkbox" id="bathed">
+                    <label class="form-check-label" for="bathed">Bathed</label>
+                    <input type="date" class="form-control mt-1 mb-2">
+                  </div>
+                  <div class="form-check mb-1">
+                    <input class="form-check-input" type="checkbox" id="nails">
+                    <label class="form-check-label" for="nails">Nails Trimmed</label>
+                    <input type="date" class="form-control mt-1 mb-2">
+                  </div>
+                  <div class="form-check mb-1">
+                    <input class="form-check-input" type="checkbox" id="ears">
+                    <label class="form-check-label" for="ears">Ears Cleaned</label>
+                    <input type="date" class="form-control mt-1 mb-2">
+                  </div>
+                  <button type="submit" class="btn btn-primary mt-2">Save</button>
+                </form>
+              </div>
+            </div>
 
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="bathed">
-    <label class="form-check-label" for="bathed">Bathed</label>
-  </div>
-  <input type="date" class="form-control mb-2">
+            <!-- Care Notes Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <h2>Care Notes</h2>
+                <form>
+                  <label for="Carenotes">Care Notes:</label>
+                  <input type="text" class="form-control mb-2" id="Carenotes" name="Carenotes">
+                  <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+              </div>
+            </div>
 
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="nails">
-    <label class="form-check-label" for="nails">Nails Trimmed</label>
-  </div>
-  <input type="date" class="form-control mb-2">
+            <!-- Emergency Contact Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <div class="alert alert-danger">Emergency Contact Information</div>
+                <form>
+                  <label class="form-label">Owner Number:</label>
+                  <input type="tel" class="form-control mb-2" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                  <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+              </div>
+            </div>
 
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="ears">
-    <label class="form-check-label" for="ears">Ears Cleaned</label>
-  </div>
-  <input type="date" class="form-control mb-2">
+            <!-- Vet Links Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <h2>Find a local veterinarian</h2>
+                <a href="https://www.massvets.com/?utm_source=gmb&utm_medium=organic&y_source=1_MTE2Njg3MTgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D">Massanutten Animal Clinic</a><br>
+                <a href="https://anicira.org/">Anicira Veterinary Center</a><br>
+                <a href="https://heartlandvetclinic.com/">Heartland Veterinary Clinic</a><br>
+              </div>
+            </div>
 
-  <button type="submit" class="btn btn-primary mt-2">Save</button>
-</form>
-	</div>
-	</div>
-
-
-
-	<div class="card mb-4 shadow">
-	  <div class="card-body">
-		<h2> Care Notes </h2>
-		<p> Use this section to record important care Information such as allergies, medications, or special instructions </p>
-		<form>
-		  <label for="Carenotes">Care Notes:</label><br>
-		  <input type="text" class="form-control" id="Carenotes" name="Carenotes"><br>
-		  <button type="submit" class="btn btn-primary mt-2">Submit</button>		</form>
-	</div>
-	</div>
-
-
-
-	<div class="card mb-4 shadow">
-  <div class="card-body">
-    <div class="alert alert-danger">
-      Emergency Contact Information
+          </main>
+        </div>
+      </div>
     </div>
 
-    <h2>Emergency Contact</h2>
+    <footer class="text-center py-4">
+      <p>Author: Brenda Tejada</p>
+      <p><a href="mailto:Brendatejada205@gmail.com">Brendatejada205@gmail.com</a></p>
+    </footer>
 
-    <form>
-      <label class="form-label">Owner Number:</label>
-      <input type="tel" class="form-control" 
-             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
-             placeholder="123-456-7890" required>
-      <button type="submit" class="btn btn-primary mt-2">Submit</button>
-    </form>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-  </div>
-</div>
-
-
-
-	<div class="card mb-4 shadow">
-	  <div class="card-body">
-		<h2> Find a local veterinarian</h2>
-		<a href="https://www.massvets.com/?utm_source=gmb&utm_medium=organic&y_source=1_MTE2Njg3MTgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D">Massanutten Animal Clinic</a><br>
-		<a href="https://anicira.org/">Anicira Veterinary Center</a><br>
-		<a href="https://heartlandvetclinic.com/">Heartland Veterinary Clinic</a><br>
-	</div>
-	</div>
-
-
-</main>
- </div>
-  </div>
-</div>
-
-<footer class="text-center py-4">
-  <p>Author: Brenda Tejada</p>
-  <p><a href="mailto:Brendatejada205@gmail.com">Brendatejada205@gmail.com</a></p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
